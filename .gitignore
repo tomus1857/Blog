@@ -1,0 +1,40 @@
+komendy.txt
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Pliki paczek i metadanych
+*.egg-info/
+*.egg
+
+# Pliki migracji Django (cache)
+*/migrations/__pycache__/
+
+# SQLite (lokalna baza danych)
+*.sqlite3
+
+# Test coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Środowisko wirtualne
+venv/
+env/
+.venv/
+
+# IDE: Visual Studio Code / PyCharm
+.vscode/
+.idea/
+
+# Logi i tymczasowe pliki edytora
+*.log
+*.swp
+*.bak
+
+# Inne śmieci
+ls
+.DS_Store
+Thumbs.db
