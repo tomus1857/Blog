@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block title %}
-    Posty
+    Home
 {% endblock %}
 
 {% block content %}
@@ -24,8 +24,6 @@
                 <p>{{post.date}}</p>
                 <p>{{post.body}}</p>
             </article>
-        {% empty %}
-            <p>Brak postów do wyświetlenia.</p>
         {% endfor %}
     </section>
 {% endblock %}
