@@ -1,15 +1,41 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
+            Blog
         {% endblock %}
     </title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <header>
+        <a href="#" class="logo">My life</a>
+        <ul class="nav_lista">
+            <li><a href="/">Home</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/Blog">Blog</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <button type="button">Sign In</button>
+            <button type="button">Sign Up</button>
+        </ul>
+    </header>
+    <main>
+        {% block content %}
+        <h1>Lista postów</h1>
+            {% for post in posts %}
+                <article>
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.date}}</p>
+                    <p>{{post.body}}</p>
+                </article>
+            {% endfor %}
+        {% endblock %}
+    </main>
 </body>
 </html>
